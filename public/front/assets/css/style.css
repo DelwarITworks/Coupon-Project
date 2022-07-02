@@ -1,0 +1,709 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --blue-color: rgb(1, 57, 241);
+    --green-color: #00bcd4;
+}
+
+body {
+    background-color: #D9E5E7;
+    overflow-x: hidden;
+    position: relative;
+}
+img {
+    max-width: 100%;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container-custom {
+    width: 1240px !important;
+    margin: auto;
+}
+
+
+header .navbar {
+    background-color: transparent !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 30px;
+}
+header .navbar .navbar-brand{
+    color: var(--blue-color);
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+header .navbar .navbar-brand i {
+    color: var(--green-color);
+}
+.navbar .sing_and_login .btn {
+    background-color: var(--green-color);
+    color: #fff;
+    font-weight: bold;
+}
+.navbar .sing_and_login .btn.join {
+    background-color: var(--blue-color);
+    margin-left: 5px;
+}
+.navbar .sing_and_login .btn.sign_up:hover {
+    background-color: rgb(20, 169, 6);
+}
+.navbar .sing_and_login .btn.join:hover {
+    background-color: rgb(6, 47, 180);
+}
+
+
+canvas {
+    display: block;
+    background:hsl(222, 25%, 10%);
+    width: 100vw;
+    filter: blur(30px);
+    height: 87vh;
+}
+  
+canvas { 
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 46%, 0% 100%);
+}
+
+
+.banner {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    position: relative;
+}
+.circle1 {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background: radial-gradient(rgba(94, 0, 246, 0.281), rgba(255, 0, 55, 0.116));
+    position: absolute;
+    top: 70%;
+    right: -250px;
+    z-index: -1;
+    animation: floating 6s infinite ease-in-out;
+}
+
+.banner .banner_content h1 {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 70px;
+    margin-top: 30px;
+}
+
+.banner .banner_coupon {
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.534);
+    border: 1px solid rgba(238, 235, 235, 0.493);
+    width: 500px;
+    backdrop-filter: blur(5px);
+    animation: floating 4s infinite ease-in-out;
+}
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }   
+}
+
+.banner_coupon .coupon_box {
+    background-color: rgba(255, 255, 255, 0.829);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border: 1px solid rgb(238, 235, 235);
+    cursor: pointer;
+}
+.banner_coupon .coupon_box .coupon_img {
+    height: 130px;
+    overflow: hidden;
+}
+.banner_coupon .coupon_box .coupon_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.banner_coupon .coupon_box .coupon_content a {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    display: inline-block;
+    color: var(--blue-color);
+}
+.banner_coupon .coupon_box .coupon_content a:hover {
+    color: rgb(16, 53, 173);
+}
+
+
+.category_menu .categories {
+    background-color: inherit;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.658);
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 0 20px 1px rgba(0, 0, 0, 0.109);
+}
+.categories .circle {
+    height: 1000px;
+    width: 2000px;
+    border-radius: 50%;
+    background: linear-gradient(to right bottom ,rgb(0, 195, 255), rgb(255, 153, 0));
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: translateX(-50%);
+    z-index: -1;
+    animation: floating2 6s infinite ease-in-out;
+}
+@keyframes floating2 {
+    from { transform: translate(-50%, 0) }
+    65% { transform: translate(-50%, -5px) }
+    to { transform: translate(-50%, 0) }
+}
+.category_menu .categories ul li {
+    width: 100%;
+}
+.category_menu .categories ul li a {
+    padding: 20px 0;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.383);
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    transition: .3s;
+}
+.category_menu .categories ul li a:hover {
+    border-bottom: 4px solid var(--blue-color);
+}
+
+
+.coupon_container .retailers {
+    background-color: inherit;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 30px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.404);
+    backdrop-filter: blur(10px);    
+    border: 1px solid rgba(255, 255, 255, 0.133);
+    box-shadow: inset 0 0 20px 1px rgba(179, 179, 179, 0.185);
+
+}
+.coupon_container .retailers .retailers_heading h4 {
+    color: #222;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.coupon_container .retailers .retailers_content a {
+    color: var(--blue-color);
+    font-size: 15px;
+    display: block;
+    margin-top: 5px;
+}
+.retailers_content .sm_box img{
+    border: 2px solid #e9e7e7;
+}
+.retailers_content .sm_box:hover img {
+    border-color: var(--green-color);
+}
+
+
+.coupons {
+    background-color: inherit;
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.133);
+    background-color: rgba(255, 255, 255, 0.404);
+    box-shadow: inset 0 0 20px 1px rgba(179, 179, 179, 0.185);
+    backdrop-filter: blur(5px);
+}
+.coupons .coupon_card {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.616);
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    padding-left: 23px;
+}
+.coupons .coupon_card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.coupons .coupon_card .card_left .offer{
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    height: 120px;
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.coupons .card_left .offer .offer_top span{
+    display: block;
+    color: var(--green-color);
+    text-align: center;
+}
+.coupons .card_left .offer .offer_top span:first-child {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 42px;
+    margin-top: 10px;
+}
+.coupons .card_left .offer_bottom {
+    background-color: rgb(211, 209, 209);
+    width: 100%;
+    text-align: center;
+    padding: 4px 0;
+}
+.coupons .card_left .offer_bottom span {
+    font-size: 13px;
+    text-transform: uppercase;
+    background-color: rgb(211, 209, 209);
+    color: #fff;
+    font-weight: bold;
+}
+.coupon_card .card_right .card_text h4 {
+    color: var(--green-color);
+    font-size: 22px;
+}
+.coupon_card .card_right .card_text p {
+    color: #aaa;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.coupon_card .card_right .card_btn .btn {
+    background-color: transparent;
+    width: 200px;
+    color: #aaa;    
+    font-weight: 500;
+    border: 2px dashed var(--green-color);
+    overflow: hidden;
+    position: relative;
+}
+.coupon_card .card_right .card_btn .btn:focus {
+    box-shadow: none;
+}
+.coupon_card .card_right .card_btn .btn::after {
+    height: 100%;
+    width: 100%;
+    background: var(--green-color);
+    text-align: center;
+    content: "Get Coupon";
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    border: 2px solid var(--green-color);
+    padding: 5px;
+    transition: .3s;
+}
+.coupon_card .card_right .card_btn .btn:hover::after {
+    left: -25px;
+}
+
+.coupons.coupon_bottom .category_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.coupons.coupon_bottom .category_box .cat {
+    padding: 7px 15px;
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px rgba(22, 21, 21, 0.103);
+}
+.coupons.coupon_bottom .category_box .cat i {
+    color: var(--green-color);
+    margin-right: 7px;
+}
+.coupons.coupon_bottom .category_box .cat  a {
+    font-size: 14px;
+}
+.coupons.coupon_bottom .category_box .cat  a:hover {
+    color: var(--green-color);
+}
+
+
+
+.popup {
+    width: 500px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: left;
+	margin: 40px auto;
+	position: relative;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: rgba(255, 255, 255, 0.801);
+    overflow: hidden;
+    height: 300px;
+}
+.popup .popup_circle {
+    background: linear-gradient(rgba(255, 255, 255, 0.466), rgba(255, 255, 255, 0.377));
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    z-index: -1;
+}
+.popup .circle_top {
+    top: -160px;
+    left: -160px;
+}
+.popup .circle_bottom {
+    bottom: -160px;
+    right: -160px;
+}
+
+/**
+ * Fade-zoom animation for first dialog
+ */
+
+/* start state */
+
+
+  .my-mfp-zoom-in .zoom-anim-dialog {
+      opacity: 0;
+  
+      -webkit-transition: all 0.2s ease-in-out; 
+      -moz-transition: all 0.2s ease-in-out; 
+      -o-transition: all 0.2s ease-in-out; 
+      transition: all 0.2s ease-in-out; 
+  
+  
+  
+      -webkit-transform: scale(0.8); 
+      -moz-transform: scale(0.8); 
+      -ms-transform: scale(0.8); 
+      -o-transform: scale(0.8); 
+      transform: scale(0.8); 
+  }
+  
+  /* animate in */
+  .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+      opacity: 1;
+  
+      -webkit-transform: scale(1); 
+      -moz-transform: scale(1); 
+      -ms-transform: scale(1); 
+      -o-transform: scale(1); 
+      transform: scale(1); 
+  }
+  
+  /* animate out */
+  .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+      -webkit-transform: scale(0.8); 
+      -moz-transform: scale(0.8); 
+      -ms-transform: scale(0.8); 
+      -o-transform: scale(0.8); 
+      transform: scale(0.8); 
+  
+      opacity: 0;
+  }
+  
+  /* Dark overlay, start state */
+  .my-mfp-zoom-in.mfp-bg {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s ease-out; 
+      -moz-transition: opacity 0.3s ease-out; 
+      -o-transition: opacity 0.3s ease-out; 
+      transition: opacity 0.3s ease-out;
+  }
+  /* animate in */
+  .my-mfp-zoom-in.mfp-ready.mfp-bg {
+      opacity: 0.3;
+  }
+  /* animate out */
+  .my-mfp-zoom-in.mfp-removing.mfp-bg {
+      opacity: 0;
+  }
+  
+  
+  
+  /**
+   * Fade-move animation for second dialog
+   */
+  
+   .my-mfp-slide-bottom {
+     background-color: rgba(0, 0, 0, 0.185) ;
+   }
+  
+  /* at start */
+  .my-mfp-slide-bottom .zoom-anim-dialog {
+      opacity: 0;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+  
+      -webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+      -moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+      -ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+      -o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+      transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+  
+  }
+  
+  /* animate in */
+  .my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+      opacity: 1;
+      -webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+      -moz-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+      -ms-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+      -o-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+      transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+  }
+  
+  /* animate out */
+  .my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+      opacity: 0;
+  
+      -webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+      -moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+      -ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+      -o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+      transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+  }
+  
+  /* Dark overlay, start state */
+  .my-mfp-slide-bottom.mfp-bg {
+      opacity: 0;
+  
+      -webkit-transition: opacity 0.3s ease-out; 
+      -moz-transition: opacity 0.3s ease-out; 
+      -o-transition: opacity 0.3s ease-out; 
+      transition: opacity 0.3s ease-out;
+  }
+  /* animate in */
+  .my-mfp-slide-bottom.mfp-ready.mfp-bg {
+      opacity: 0.8;
+  }
+  /* animate out */
+  .my-mfp-slide-bottom.mfp-removing.mfp-bg {
+      opacity: 0;
+  }
+  
+  
+
+/* popup */
+.popup_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.popup_content .copy .coupon_text {
+    padding: 8px 20px;
+    background-color: #fff;
+    color: var(--green-color);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+}
+.popup_content .copy .coupon_text:focus {
+    outline: none;
+}
+.popup_content .copy .copy_btn{
+    background-color: var(--green-color);
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 20px;
+    border-radius: 0 5px 5px 0;
+    position: relative;
+}
+.popup_content .copy .copy_btn:hover{
+    background-color: #048fa1;
+}
+.popup_content .copy .copy_btn::after {
+    content: "copied";
+    position: absolute;
+    font-size: 15px;
+    top: -50px;
+    background-color: var(--green-color);
+    padding: 5px 10px;
+    border-radius: 3px;
+    right: 0;
+    display: none;
+}
+.popup_content .copy .copy_btn::before {
+    content: "";
+    height: 0;
+    width: 0;
+    border: 2px solid var(--green-color);
+    position: absolute;
+    top: -20px;
+    transform: rotate(45deg);
+    right: 20px;
+    display: none;
+}
+.copy.copy_active .copy_btn::before, 
+.copy.copy_active .copy_btn::after {
+    display: block;
+}
+.go_btn a {
+    padding: 8px 20px;
+    font-size: 20px ;
+    background-color: var(--blue-color);
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.go_btn a:hover {
+    background-color: #110ed8;
+    color: #fff;
+}
+
+
+.top_offer .head h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.offer_container .offer_box {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+.offer_container .offer_box:hover {
+    transform: translateY(-5px);
+}
+.offer_container .offer_box .offer_image {
+    width: 100%;
+    height: 135px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #aaa;
+}
+.offer_container .offer_box .offer_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.offer_box .offer_content {
+    padding-top: 15px;
+}
+.offer_content h6 {
+    text-transform: uppercase;
+}
+.offer_content p {
+    color: #777;
+}
+.offer_content span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+footer {
+    border-top: 1px solid rgb(211, 209, 209);
+}
+footer .footer_image {
+    padding-right: 20px;
+}
+footer .footer_image p {
+    color: #777;
+    font-size: 16px;
+    margin-top: 15px;
+}
+footer .footer_box h4 {
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+footer .footer_box ul li a{
+    color: #222;
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+footer .footer_box ul li a:hover {
+    color: var(--green-color);
+}
+
+.footer_contact h4 {
+    font-size: 23px;
+    font-weight: 600;
+}
+.footer_contact .footer_icon {
+    margin-top: 15px;
+}
+.footer_contact .footer_icon i {
+    width: 32px;
+    height: 32px;
+    background-color: var(--green-color);
+    border-radius: 50px;
+    text-align: center;
+    line-height: 32px;
+    color: #fff;
+    margin-right: 7px;
+    transition: .3s;
+}
+.footer_contact .footer_icon i:hover {
+    transform: translateY(-4px);
+}
+.footer_bottom {
+    border-top: 1px solid rgb(211, 209, 209);
+}
+
+
+.footer_bottom_right a {
+    color: #222;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+.footer_bottom_right a:hover {
+    color: var(--green-color);
+}
